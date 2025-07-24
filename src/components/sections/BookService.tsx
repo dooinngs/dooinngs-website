@@ -36,7 +36,7 @@ const BookService = () => {
             <p className="text-sm text-[#7A7A7A] leading-relaxed mb-4">
               Dooinngs connects you with trusted professionals, ensuring
               convenience, quality, and reliability whenever and wherever you
-              need them.
+              need them..
             </p>
 
             {/* Shopping bag icon - right side under description */}
