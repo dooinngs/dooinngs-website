@@ -7,7 +7,7 @@ import "swiper/css/free-mode";
 
 const artisanData = [
   { src: "/assets/images/ArtisanImages/Image1.png", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/image2.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image2.png", label: "Painters" },
   { src: "/assets/images/ArtisanImages/Image3.png", label: "Painters" },
   { src: "/assets/images/ArtisanImages/Image4.png", label: "Painters" },
   { src: "/assets/images/ArtisanImages/Image5.png", label: "Painters" },
