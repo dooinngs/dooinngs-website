@@ -6,21 +6,22 @@ import "swiper/css";
 import "swiper/css/free-mode";
 
 const artisanData = [
-  { src: "/assets/images/ArtisanImages/Image1.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/image2.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image3.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image4.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image5.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image6.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image7.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image8.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image9.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image10.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image12.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image13.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image14.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image15.svg", label: "Painters" },
-  { src: "/assets/images/ArtisanImages/Image16.svg", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image1.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/image2.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image3.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image4.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image5.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image6.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image7.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image8.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image9.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image10.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image11.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image12.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image13.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image14.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image15.png", label: "Painters" },
+  { src: "/assets/images/ArtisanImages/Image16.png", label: "Painters" },
 
   // Add the rest of your 16 images and labels here
 ];

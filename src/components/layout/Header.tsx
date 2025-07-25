@@ -186,7 +186,7 @@ const Header = () => {
           <div className="flex-1 flex justify-center mt-6 sm:mt-8 lg:mt-10 xl:mt-0 relative">
             <div className="w-[374px] h-[393px] md:w-[590px] md:h-[618px] flex items-center justify-center mx-auto">
               <img
-                src="/assets/images/Frame.svg"
+                src="/assets/images/Frame.png"
                 alt="Skilled professionals"
                 className="w-full h-full object-cover"
               />

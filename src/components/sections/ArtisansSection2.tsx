@@ -6,22 +6,22 @@ const ArtisansSection2 = () => {
       <section className="mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-1 sm:gap-1 md:gap-1 lg:gap-1 xl:gap-1 mt-12 md:mt-35 w-full">
           <img
-            src="assets/images/Frame1.svg"
+            src="assets/images/image1.png"
             alt=""
             className="col-span-1 md:col-span-1 lg:col-span-2 h-32 sm:h-40 lg:h-[284px] object-cover w-full"
           />
           <img
-            src="assets/images/image1.svg"
+            src="assets/images/image2.png"
             alt=""
             className="col-span-1 md:col-span-1 lg:col-span-1 h-32 sm:h-40 lg:h-[284px] object-cover w-full"
           />
           <img
-            src="assets/images/image2.svg"
+            src="assets/images/image3.png"
             alt=""
             className="col-span-1 md:col-span-1 lg:col-span-1 h-32 sm:h-40 lg:h-[284px] object-cover w-full"
           />
           <img
-            src="assets/images/image70.svg"
+            src="assets/images/image4.png"
             alt=""
             className="col-span-1 md:col-span-1 lg:col-span-2 h-32 sm:h-40 lg:h-[284px] object-cover w-full"
           />
@@ -31,17 +31,17 @@ const ArtisansSection2 = () => {
       <section className="mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1 sm:gap-1 md:gap-1 lg:gap-1 xl:gap-1  w-full">
           <img
-            src="assets/images/image95.svg"
+            src="assets/images/image5.png"
             alt=""
             className="col-span-1 md:col-span-1 lg:col-span-2 h-32 sm:h-40 lg:h-[284px] object-cover w-full"
           />
           <img
-            src="assets/images/image94.svg"
+            src="assets/images/image6.png"
             alt=""
             className="col-span-1 md:col-span-1 lg:col-span-2 h-32 sm:h-40 lg:h-[284px] object-cover w-full"
           />
           <img
-            src="assets/images/Frame4.svg"
+            src="assets/images/image7.png"
             alt=""
             className="col-span-1 md:col-span-1 lg:col-span-2 h-32 sm:h-40 lg:h-[284px] object-cover w-full hidden lg:block"
           />

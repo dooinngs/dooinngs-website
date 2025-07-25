@@ -337,7 +337,7 @@ const BookService = () => {
         {/* Mobile Layout - Single phone */}
         <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2 md:hidden">
           <Image
-            src="/assets/images/iPhone7.svg"
+            src="/assets/images/iPhone7.png"
             alt="Phone"
             width={300}
             height={600}
