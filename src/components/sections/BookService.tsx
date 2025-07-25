@@ -36,7 +36,7 @@ const BookService = () => {
             <p className="text-sm text-[#7A7A7A] leading-relaxed mb-4">
               Dooinngs connects you with trusted professionals, ensuring
               convenience, quality, and reliability whenever and wherever you
-              need them..
+              need them.
             </p>
 
             {/* Shopping bag icon - right side under description */}
@@ -150,7 +150,7 @@ const BookService = () => {
               {/* Desktop Layout (769px and above) */}
               <div className="hidden md:block relative z-10">
                 <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 mb-2 sm:mb-3 lg:mb-4">
-                  <h3 className="text-xl sm:text-xl lg:text-2xl xl:text-[38px] font-semibold text-[#2D2D2D]">
+                  <h3 className="text-xl sm:text-xl lg:text-3xl xl:text-[38px] font-semibold text-[#2D2D2D]">
                     Book as a gift for <br />
                     your loved ones
                   </h3>
@@ -216,7 +216,7 @@ const BookService = () => {
             {/* Gift Card - Right Side */}
             <div className="bg-[#E8F4F8] rounded-2xl sm:rounded-3xl p-4 sm:p-6 lg:p-8 relative overflow-hidden min-h-[400px] sm:min-h-[500px] lg:min-h-[600px] xl:min-h-[744px] w-full max-w-[850px] lg:flex-1">
               <div className="relative z-10 text-center md:text-left">
-                <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-[48px] font-semibold text-[#2D2D2D] mb-2 sm:mb-3 lg:mb-4">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl xl:text-[38px] font-semibold text-[#2D2D2D] mb-2 sm:mb-3 lg:mb-4">
                   Fast and secure payment of
                   <br />
                   services to artisans

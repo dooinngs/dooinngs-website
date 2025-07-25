@@ -150,32 +150,32 @@ const Header = () => {
               professionals to get a job done swiftly and effectively
             </p>
             <div className="flex flex-row gap-3 sm:gap-4 mt-4 sm:mt-6 w-full sm:w-auto max-w-md sm:max-w-none">
-              <button className="group flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4 rounded-full bg-gradient-to-r from-gray-900 to-black text-white cursor-pointer flex-1 sm:w-auto justify-center sm:justify-start hover:from-gray-800 hover:to-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="group flex items-center gap-2 sm:gap-4 lg:gap-2 px-2 sm:px-6 py-3 sm:py-4 rounded-full bg-gradient-to-r from-gray-900 to-black text-white cursor-pointer w-full sm:w-auto min-w-[120px] sm:min-w-[200px] justify-center hover:from-gray-800 hover:to-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 <img
                   src="/assets/icons/apple.svg"
                   alt="Apple logo"
-                  className="w-7 h-7 sm:w-9 sm:h-9 group-hover:scale-110 transition-transform duration-300"
+                  className="w-5 h-5 sm:w-9 sm:h-9 group-hover:scale-110 transition-transform duration-300"
                 />
                 <span className="flex flex-col items-start text-left">
-                  <span className="text-[10px] sm:text-xs text-gray-300 font-medium tracking-wide uppercase">
+                  <span className="text-[8px] sm:text-xs lg:text-[10px] text-gray-300 font-medium tracking-wide uppercase">
                     Coming soon to
                   </span>
-                  <span className="text-sm sm:text-lg font-bold leading-tight tracking-tight">
+                  <span className="text-xs sm:text-lg font-bold leading-tight tracking-tight">
                     App Store
                   </span>
                 </span>
               </button>
-              <button className="group flex items-center gap-3 sm:gap-4 px-4 sm:px-6 py-3 sm:py-4 rounded-full bg-gradient-to-r from-gray-900 to-black text-white cursor-pointer flex-1 sm:w-auto justify-center sm:justify-start hover:from-gray-800 hover:to-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+              <button className="group flex items-center gap-2 sm:gap-4 lg:gap-2 px-2 sm:px-6 py-3 sm:py-4 rounded-full bg-gradient-to-r from-gray-900 to-black text-white cursor-pointer w-full sm:w-auto min-w-[120px] sm:min-w-[200px] justify-center hover:from-gray-800 hover:to-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
                 <img
                   src="/assets/icons/playstore.svg"
                   alt="Play Store logo"
-                  className="w-7 h-7 sm:w-9 sm:h-9 group-hover:scale-110 transition-transform duration-300"
+                  className="w-5 h-5 sm:w-9 sm:h-9 group-hover:scale-110 transition-transform duration-300"
                 />
                 <span className="flex flex-col items-start text-left">
-                  <span className="text-[10px] sm:text-xs text-gray-300 font-medium tracking-wide uppercase">
+                  <span className="text-[8px] sm:text-xs lg:text-[10px] text-gray-300 font-medium tracking-wide uppercase">
                     Coming soon to
                   </span>
-                  <span className="text-sm sm:text-lg font-bold leading-tight tracking-tight">
+                  <span className="text-xs sm:text-lg font-bold leading-tight tracking-tight">
                     Google Play
                   </span>
                 </span>

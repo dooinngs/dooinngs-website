@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CtaSection = () => {
   return (
-    <div className="bg-[#E41C4C] py-3 sm:py-4 lg:py-6 px-4 sm:px-6 lg:px-6 xl:px-8 2xl:px-8 mx-4 sm:mx-6 lg:mx-8 xl:mx-16 2xl:mx-24 rounded-2xl my-[58px]">
+    <div className="bg-[#E41C4C] pt-3 sm:pt-4 lg:pt-6 px-4 sm:px-6 lg:px-6 xl:px-8 2xl:px-8 mx-4 sm:mx-6 lg:mx-8 xl:mx-16 2xl:mx-24 rounded-2xl my-[58px]">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
         {/* Left side: Text and Buttons */}
         <div className="flex-2 max-w-2xl ">
@@ -49,13 +49,13 @@ const CtaSection = () => {
         </div>
 
         {/* Right side: Phone Image */}
-        <div className="flex-1 flex justify-center lg:justify-end items-end">
+        <div className="flex-1 relative overflow-hidden ">
           <Image
             src="assets/images/iPhone14.svg"
             alt="Dooinngs App on iPhone"
             width={400}
             height={800}
-            className="w-[400px] md:w-[300px] md:h-[500px] lg:w-[360px] lg:h-[540px] xl:w-[600px] xl:h-[600px] object-contain ml-30 md:ml-0 relative lg:top-[60px] top-3"
+            className="w-full h-full object-cover ml-12 md:ml-0"
           />
         </div>
       </div>
