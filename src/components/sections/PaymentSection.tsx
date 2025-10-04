@@ -14,7 +14,7 @@ const PaymentSection = () => {
               width={20} 
               height={20}
             />
-            <span className="text-black-600 font-medium text-[12px] lg:text-[18px]">
+            <span className="text-black-600 font-medium text-[11px] lg:text-[18px] whitespace-nowrap">
               Secured by <span className="font-bold">Paystack</span>
             </span>
           </div>
