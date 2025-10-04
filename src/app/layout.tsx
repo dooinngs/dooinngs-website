@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Figtree } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
+import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 
 const figtree = Figtree({
@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${figtree.variable} antialiased`}>
-        <Header />
+        <Navbar />
         {children}
         <Footer />
       </body>

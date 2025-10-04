@@ -1,4 +1,5 @@
 import { Instagram } from "lucide-react";
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -30,12 +31,18 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-white font-bold text-2xl ">Company</h1>
-          <div className="flex items-center text-white mt-2">
+          <Link 
+            href="/terms-of-service"
+            className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
+          >
             <span>Terms of Service</span>
-          </div>
-          <div className="flex items-center text-white mt-2">
+          </Link>
+          <Link 
+            href="/privacy-policy"
+            className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
+          >
             <span>Privacy Policy</span>
-          </div>
+          </Link>
           <div className="flex items-center text-white mt-2">
             <span>FAQs</span>
           </div>
