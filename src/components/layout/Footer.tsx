@@ -42,42 +42,67 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-4 ">
           <h1 className="text-white font-bold text-2xl">Socials</h1>
-          <div className="flex items-center text-white mt-2">
+          <a 
+            href="https://www.linkedin.com/company/dooinngs" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
+          >
             <img
               src="assets/icons/linkedin.svg"
-              alt="email"
+              alt="LinkedIn"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
             <span>LinkedIn</span>
-          </div>
-          <div className="flex items-center text-white mt-2">
+          </a>
+          <a 
+            href="https://www.instagram.com/dooinngs" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
+          >
             <Instagram className="w-6 h-6 mr-4 flex-shrink-0" />
             <span>Instagram</span>
-          </div>
-          <div className="flex items-center text-white mt-2">
+          </a>
+          <a 
+            href="https://www.facebook.com/profile.php?id=61567257834764#" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
+          >
             <img
               src="assets/icons/facebook.svg"
-              alt="email"
+              alt="Facebook"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
             <span>Facebook</span>
-          </div>
-          <div className="flex items-center text-white mt-2">
+          </a>
+          <a 
+            href="https://www.tiktok.com/@dooinngs" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
+          >
             <img
               src="assets/icons/tiktok.svg"
-              alt="email"
+              alt="TikTok"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
             <span>Tiktok</span>
-          </div>
-          <div className="flex items-center text-white mt-2">
+          </a>
+          <a 
+            href="https://x.com/dooinngs" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
+          >
             <img
               src="assets/icons/X.svg"
-              alt="email"
+              alt="X (Twitter)"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
             <span>X</span>
-          </div>
+          </a>
         </div>
       </div>
 
