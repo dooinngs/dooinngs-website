@@ -3,7 +3,7 @@ import ArtisansSections from "@/components/sections/ArtisansSections";
 import BookService from "@/components/sections/BookService";
 import CtaSection from "@/components/sections/CtaSection";
 import Header from "@/components/sections/Header";
-import PaymentSection from "@/components/sections/PaymentSection";
+import PaymentPartnershipSection from "@/components/sections/PaymentSection";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <BookService />
       <ArtisansSection2 />
       <CtaSection />
-      <PaymentSection />
+      <PaymentPartnershipSection />
     </div>
   );
 }

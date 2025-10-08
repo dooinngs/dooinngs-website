@@ -11,7 +11,7 @@ const figtree = Figtree({
 });
 
 export const metadata: Metadata = {
-  title: "Dooinngs | Carpenters, Masons, Vulcanizers & more",
+  title: "Dooinngs | Barbers, Nail Techs, Masons & more",
   description:
     "Dooinngs is a platform that connects you with skilled artisans in your area. Whether you need a carpenter, mason, or a vulcanizer, you can find them here.",
 };
