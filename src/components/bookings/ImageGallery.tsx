@@ -28,7 +28,7 @@ const ImageGallery = () => {
   return (
     <>
       {/* Mobile Slider */}
-      <div className="block sm:hidden -mx-4 mb-0">
+      <div className="block sm:hidden mb-0">
         <Swiper
           modules={[Pagination]}
           pagination={{ clickable: true }}
