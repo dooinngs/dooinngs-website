@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Category } from "@/data/bookings/types";
+import { Category } from "@/types/bookings";
 
 interface ServicesSectionProps {
   categories: Category[];

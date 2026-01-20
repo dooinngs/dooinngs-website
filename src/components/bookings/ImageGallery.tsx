@@ -1,5 +1,12 @@
+"use client";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+
 const ImagePlaceholder = ({ size = "large" }: { size?: "large" | "small" }) => (
-  <div className="absolute inset-0 flex items-center justify-center text-gray-400">
+  <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       className={size === "large" ? "w-16 h-16" : "w-8 h-8"}
@@ -19,25 +26,43 @@ const ImagePlaceholder = ({ size = "large" }: { size?: "large" | "small" }) => (
 
 const ImageGallery = () => {
   return (
-    <div className="grid grid-cols-4 gap-2 mb-8 rounded-xl overflow-hidden">
-      {/* Main large image */}
-      <div className="col-span-2 row-span-2 bg-gray-200 aspect-square relative">
-        <ImagePlaceholder size="large" />
+    <>
+      {/* Mobile Slider */}
+      <div className="block sm:hidden -mx-4 mb-0">
+        <Swiper
+          modules={[Pagination]}
+          pagination={{ clickable: true }}
+          className="aspect-[4/3] w-full"
+        >
+          {[1, 2, 3, 4, 5].map((_, index) => (
+            <SwiperSlide key={index} className="relative bg-gray-200">
+              <ImagePlaceholder size="large" />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
-      {/* Smaller images */}
-      <div className="bg-gray-200 aspect-square relative">
-        <ImagePlaceholder size="small" />
+
+      {/* Desktop Grid */}
+      <div className="hidden sm:grid grid-cols-4 gap-2 mb-8 rounded-xl overflow-hidden">
+        {/* Main large image */}
+        <div className="col-span-2 row-span-2 bg-gray-200 aspect-square relative">
+          <ImagePlaceholder size="large" />
+        </div>
+        {/* Smaller images */}
+        <div className="bg-gray-200 aspect-square relative">
+          <ImagePlaceholder size="small" />
+        </div>
+        <div className="bg-gray-200 aspect-square relative">
+          <ImagePlaceholder size="small" />
+        </div>
+        <div className="bg-gray-200 aspect-square relative">
+          <ImagePlaceholder size="small" />
+        </div>
+        <div className="bg-gray-200 aspect-square relative">
+          <ImagePlaceholder size="small" />
+        </div>
       </div>
-      <div className="bg-gray-200 aspect-square relative">
-        <ImagePlaceholder size="small" />
-      </div>
-      <div className="bg-gray-200 aspect-square relative">
-        <ImagePlaceholder size="small" />
-      </div>
-      <div className="bg-gray-200 aspect-square relative">
-        <ImagePlaceholder size="small" />
-      </div>
-    </div>
+    </>
   );
 };
 

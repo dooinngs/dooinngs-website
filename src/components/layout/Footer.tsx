@@ -8,10 +8,10 @@ const Footer = () => {
     <section className="w-full pt-20 bg-[#181818]">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24 ">
         <div className="flex flex-col gap-4">
-          <img src="assets/logos/logo.svg" alt="logo" className="w-56" />
+          <img src="/assets/logos/logo.svg" alt="logo" className="w-56" />
           <div className="flex items-center text-white mt-2">
             <img
-              src="assets/icons/Mail.svg"
+              src="/assets/icons/Mail.svg"
               alt="email"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
           <div className="flex items-start text-white mt-2">
             <img
-              src="assets/icons/house.svg"
+              src="/assets/icons/house.svg"
               alt="location"
               className="w-6 h-6 mr-4  flex-shrink-0"
             />
@@ -57,7 +57,7 @@ const Footer = () => {
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
             <img
-              src="assets/icons/linkedin.svg"
+              src="/assets/icons/linkedin.svg"
               alt="LinkedIn"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
@@ -79,7 +79,7 @@ const Footer = () => {
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
             <img
-              src="assets/icons/facebook.svg"
+              src="/assets/icons/facebook.svg"
               alt="Facebook"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
@@ -92,7 +92,7 @@ const Footer = () => {
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
             <img
-              src="assets/icons/tiktok.svg"
+              src="/assets/icons/tiktok.svg"
               alt="TikTok"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
@@ -105,7 +105,7 @@ const Footer = () => {
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
             <img
-              src="assets/icons/X.svg"
+              src="/assets/icons/X.svg"
               alt="X (Twitter)"
               className="w-6 h-6 mr-4 flex-shrink-0"
             />
@@ -123,7 +123,7 @@ const Footer = () => {
         </div>
         <div className="flex justify-center items-center">
           <img
-            src="assets/images/dooinngsLarge.svg"
+            src="/assets/images/dooinngsLarge.svg"
             alt=""
             className="w-3/4 h-auto sm:w-2/3 md:w-3/4 lg:w-full lg:h-full"
             style={{

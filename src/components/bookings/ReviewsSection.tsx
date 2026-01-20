@@ -1,4 +1,4 @@
-import { Review } from "@/data/bookings/types";
+import { Review } from "@/types/bookings";
 
 interface ReviewsSectionProps {
   reviews: Review[];

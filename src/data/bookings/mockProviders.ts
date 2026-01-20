@@ -1,4 +1,4 @@
-import { ProviderData } from "./types";
+import { ProviderData } from "@/types/bookings";
 
 export const mockProviders: Record<string, ProviderData> = {
   "13924993": {
