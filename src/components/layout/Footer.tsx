@@ -1,3 +1,4 @@
+"use client";
 import { Instagram } from "lucide-react";
 import Link from "next/link";
 import React from "react";
@@ -31,13 +32,13 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-4">
           <h1 className="text-white font-bold text-2xl ">Company</h1>
-          <Link 
+          <Link
             href="/terms-of-service"
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
             <span>Terms of Service</span>
           </Link>
-          <Link 
+          <Link
             href="/privacy-policy"
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
@@ -49,9 +50,9 @@ const Footer = () => {
         </div>
         <div className="flex flex-col gap-4 ">
           <h1 className="text-white font-bold text-2xl">Socials</h1>
-          <a 
-            href="https://www.linkedin.com/company/dooinngs" 
-            target="_blank" 
+          <a
+            href="https://www.linkedin.com/company/dooinngs"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
@@ -62,18 +63,18 @@ const Footer = () => {
             />
             <span>LinkedIn</span>
           </a>
-          <a 
-            href="https://www.instagram.com/dooinngs" 
-            target="_blank" 
+          <a
+            href="https://www.instagram.com/dooinngs"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
             <Instagram className="w-6 h-6 mr-4 flex-shrink-0" />
             <span>Instagram</span>
           </a>
-          <a 
-            href="https://www.facebook.com/profile.php?id=61567257834764#" 
-            target="_blank" 
+          <a
+            href="https://www.facebook.com/profile.php?id=61567257834764#"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
@@ -84,9 +85,9 @@ const Footer = () => {
             />
             <span>Facebook</span>
           </a>
-          <a 
-            href="https://www.tiktok.com/@dooinngs" 
-            target="_blank" 
+          <a
+            href="https://www.tiktok.com/@dooinngs"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
@@ -97,9 +98,9 @@ const Footer = () => {
             />
             <span>Tiktok</span>
           </a>
-          <a 
-            href="https://x.com/dooinngs" 
-            target="_blank" 
+          <a
+            href="https://x.com/dooinngs"
+            target="_blank"
             rel="noopener noreferrer"
             className="flex items-center text-white mt-2 hover:text-gray-300 transition-colors cursor-pointer"
           >
@@ -116,7 +117,7 @@ const Footer = () => {
       <div className="flex flex-col items-center justify-center mt-12 pt-8 ">
         <div className="flex items-center  text-[#838383] text-sm md:text-base lg:text-[18px] mb-3 md:mb-0">
           <span className="mr-2">Copyright ©</span>
-          <span>
+          <span suppressHydrationWarning>
             Dooinngs Inc {new Date().getFullYear()}. All rights reserved.
           </span>
         </div>

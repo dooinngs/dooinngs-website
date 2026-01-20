@@ -48,14 +48,14 @@ const Navbar = () => {
           {/* Right side: Auth buttons (desktop) and Mobile menu button */}
           <div className="flex items-center gap-2 sm:gap-4">
             {/* Desktop Auth Buttons */}
-            <div className="hidden md:flex items-center gap-2 sm:gap-4">
+            {/* <div className="hidden md:flex items-center gap-2 sm:gap-4">
               <button className="px-2 py-2 sm:px-3 sm:py-2 lg:px-4 lg:py-[10px] rounded-full bg-white text-[#E41C4C] text-xs sm:text-sm lg:text-base font-semibold hover:bg-gray-100 transition cursor-pointer">
                 Create an account
               </button>
               <button className="px-2 py-2 sm:px-3 sm:py-2 lg:px-4 lg:py-[10px] rounded-full border border-white text-white text-xs sm:text-sm lg:text-base font-semibold hover:bg-white hover:text-[#E41C4C] transition cursor-pointer">
                 Sign in
               </button>
-            </div>
+            </div> */}
 
             {/* Mobile Menu Button */}
             <button
@@ -106,7 +106,7 @@ const Navbar = () => {
             </nav>
 
             {/* Mobile Auth Buttons */}
-            <div className="flex flex-col gap-3">
+            {/* <div className="flex flex-col gap-3">
               <button
                 className="w-full px-4 py-3 rounded-full bg-[#E41C4C] text-white text-base font-semibold hover:bg-[#d1184a] transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
@@ -119,7 +119,7 @@ const Navbar = () => {
               >
                 Sign in
               </button>
-            </div>
+            </div> */}
           </div>
         </div>
 
