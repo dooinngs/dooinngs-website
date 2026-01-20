@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CtaSection = () => {
   return (
-    <div className="bg-[#E41C4C] pt-3 sm:pt-4 lg:pt-6 px-4 sm:px-6 lg:px-6 xl:px-8 2xl:px-8 mx-4 sm:mx-6 lg:mx-8 xl:mx-16 2xl:mx-24 rounded-2xl my-[58px]">
+    <div id="download" className="bg-[#E41C4C] pt-3 sm:pt-4 lg:pt-6 px-4 sm:px-6 lg:px-6 xl:px-8 2xl:px-8 mx-4 sm:mx-6 lg:mx-8 xl:mx-16 2xl:mx-24 rounded-2xl my-[58px] scroll-mt-24">
       <div className="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12 px-4 sm:px-6 lg:px-8 xl:px-16 2xl:px-24">
         {/* Left side: Text and Buttons */}
         <div className="flex-2 max-w-2xl ">
