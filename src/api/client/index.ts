@@ -2,7 +2,6 @@ import axios from "axios";
 
 // Base URL from environment variables
 export const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-export const CSRF_TOKEN = process.env.NEXT_PUBLIC_CSRF_TOKEN;
 
 // Create axios instance with default config
 const apiClient = axios.create({
@@ -10,7 +9,6 @@ const apiClient = axios.create({
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
-    "X-CSRFTOKEN": CSRF_TOKEN || "",
   },
 });
 

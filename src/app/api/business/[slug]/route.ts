@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
-const CSRF_TOKEN = process.env.NEXT_PUBLIC_CSRF_TOKEN;
+const CSRF_TOKEN = process.env.CSRF_TOKEN; // Server-only, not exposed to browser
 
 export async function GET(
   request: NextRequest,
