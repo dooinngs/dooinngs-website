@@ -5,6 +5,10 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
+interface ImageGalleryProps {
+  images?: string[];
+}
+
 const ImagePlaceholder = ({ size = "large" }: { size?: "large" | "small" }) => (
   <div className="absolute inset-0 flex items-center justify-center text-gray-400 bg-gray-200">
     <svg
@@ -24,7 +28,10 @@ const ImagePlaceholder = ({ size = "large" }: { size?: "large" | "small" }) => (
   </div>
 );
 
-const ImageGallery = () => {
+const ImageGallery = ({ images = [] }: ImageGalleryProps) => {
+  const displayImages = images.length > 0 ? images : [];
+  const hasImages = displayImages.length > 0;
+
   return (
     <>
       {/* Mobile Slider */}
@@ -34,11 +41,21 @@ const ImageGallery = () => {
           pagination={{ clickable: true }}
           className="aspect-[4/3] w-full"
         >
-          {[1, 2, 3, 4, 5].map((_, index) => (
-            <SwiperSlide key={index} className="relative bg-gray-200">
-              <ImagePlaceholder size="large" />
-            </SwiperSlide>
-          ))}
+          {hasImages
+            ? displayImages.map((imageUrl, index) => (
+                <SwiperSlide key={index} className="relative bg-gray-200">
+                  <img
+                    src={imageUrl}
+                    alt={`Gallery image ${index + 1}`}
+                    className="absolute inset-0 w-full h-full object-cover"
+                  />
+                </SwiperSlide>
+              ))
+            : [1, 2, 3, 4, 5].map((_, index) => (
+                <SwiperSlide key={index} className="relative bg-gray-200">
+                  <ImagePlaceholder size="large" />
+                </SwiperSlide>
+              ))}
         </Swiper>
       </div>
 
@@ -46,21 +63,30 @@ const ImageGallery = () => {
       <div className="hidden sm:grid grid-cols-4 gap-2 mb-8 rounded-xl overflow-hidden">
         {/* Main large image */}
         <div className="col-span-2 row-span-2 bg-gray-200 aspect-square relative">
-          <ImagePlaceholder size="large" />
+          {hasImages && displayImages[0] ? (
+            <img
+              src={displayImages[0]}
+              alt="Main gallery image"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          ) : (
+            <ImagePlaceholder size="large" />
+          )}
         </div>
         {/* Smaller images */}
-        <div className="bg-gray-200 aspect-square relative">
-          <ImagePlaceholder size="small" />
-        </div>
-        <div className="bg-gray-200 aspect-square relative">
-          <ImagePlaceholder size="small" />
-        </div>
-        <div className="bg-gray-200 aspect-square relative">
-          <ImagePlaceholder size="small" />
-        </div>
-        <div className="bg-gray-200 aspect-square relative">
-          <ImagePlaceholder size="small" />
-        </div>
+        {[1, 2, 3, 4].map((index) => (
+          <div key={index} className="bg-gray-200 aspect-square relative">
+            {hasImages && displayImages[index] ? (
+              <img
+                src={displayImages[index]}
+                alt={`Gallery image ${index + 1}`}
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <ImagePlaceholder size="small" />
+            )}
+          </div>
+        ))}
       </div>
     </>
   );
