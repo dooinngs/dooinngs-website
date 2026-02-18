@@ -4,6 +4,7 @@ import BookService from "@/components/sections/BookService";
 import CtaSection from "@/components/sections/CtaSection";
 import Header from "@/components/sections/Header";
 import PaymentPartnershipSection from "@/components/sections/PaymentSection";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <ArtisansSection2 />
       <CtaSection />
       <PaymentPartnershipSection />
+      <Footer />
     </div>
   );
 }
