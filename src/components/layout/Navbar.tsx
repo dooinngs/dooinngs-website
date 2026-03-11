@@ -31,12 +31,12 @@ const Navbar = () => {
 
           {/* Center: Navigation Links */}
           <nav className="hidden md:flex items-center gap-4 lg:gap-8">
-            <a
-              href="#"
+            <Link
+              href="/marketplace"
               className="text-white text-sm lg:text-lg font-medium hover:underline transition-colors"
             >
-              Dooers
-            </a>
+              Marketplace
+            </Link>
             <a
               href="#"
               className="text-white text-sm lg:text-lg font-medium hover:underline transition-colors"
@@ -117,13 +117,13 @@ const Navbar = () => {
           <div className="px-4 py-6">
             {/* Navigation Links */}
             <nav className="flex flex-col gap-4 mb-6">
-              <a
-                href="#"
+              <Link
+                href="/marketplace"
                 className="text-gray-800 text-lg font-medium hover:text-[#E41C4C] transition-colors py-2 border-b border-gray-100"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Dooers
-              </a>
+                Marketplace
+              </Link>
               <a
                 href="#"
                 className="text-gray-800 text-lg font-medium hover:text-[#E41C4C] transition-colors py-2 border-b border-gray-100"
