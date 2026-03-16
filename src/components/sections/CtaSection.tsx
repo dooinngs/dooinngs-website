@@ -49,7 +49,7 @@ const CtaSection = () => {
         </div>
 
         {/* Right side: Phone Image */}
-        <div className="flex-1 relative overflow-hidden ">
+        <div className="flex-1 relative overflow-hidden max-w-[400px]">
           <Image
             src="/assets/images/iPhone8.png"
             alt="Dooinngs App on iPhone"

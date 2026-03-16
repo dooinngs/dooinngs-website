@@ -127,7 +127,9 @@ const businesses = [
   },
 ];
 
-export default function MarketplacePage() {
+// Full marketplace UI — swap the default export below once the API is ready
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+function MarketplaceContent() {
   const [activeCategory, setActiveCategory] = useState("barber");
   const [search, setSearch] = useState("");
 
@@ -201,6 +203,31 @@ export default function MarketplacePage() {
         )}
       </div>
 
+    </div>
+  );
+}
+
+export default function MarketplacePage() {
+  return (
+    <div className="min-h-screen bg-white flex flex-col items-center justify-center px-4">
+      <div className="flex flex-col items-center gap-6 max-w-md text-center">
+        <div className="w-16 h-16 rounded-2xl bg-[#FFE4EB] flex items-center justify-center">
+          <span className="text-3xl">🛍️</span>
+        </div>
+        <div className="flex flex-col gap-2">
+          <h2 className="text-xl font-bold text-gray-900">Marketplace Coming Soon</h2>
+          <p className="text-sm text-gray-500 leading-relaxed">
+            We&apos;re working on bringing you the best beauty &amp; grooming professionals near you. Check back soon!
+          </p>
+        </div>
+        <div className="flex flex-wrap justify-center gap-2">
+          {["Barbers", "Hairstylists", "Lash Techs", "Nail Artists", "Makeup Artists", "Spas"].map((label) => (
+            <span key={label} className="px-3 py-1 rounded-full bg-gray-50 border border-gray-200 text-xs text-gray-600 font-medium">
+              {label}
+            </span>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }
