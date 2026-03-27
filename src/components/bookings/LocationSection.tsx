@@ -1,16 +1,6 @@
 "use client";
 
-import dynamic from "next/dynamic";
-
-// Dynamic import to avoid SSR issues with Leaflet
-const Map = dynamic(() => import("./Map"), {
-  ssr: false,
-  loading: () => (
-    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-      <div className="animate-spin rounded-full h-8 w-8 border-2 border-gray-400 border-t-transparent"></div>
-    </div>
-  ),
-});
+import Map from "./Map";
 
 interface LocationSectionProps {
   address: string;
@@ -42,7 +32,6 @@ const LocationSection = ({
             businessName={businessName}
           />
         ) : (
-          // Fallback placeholder when no coordinates
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
               <svg

@@ -1,12 +1,15 @@
 "use client";
 
+import { useState, useCallback } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
+import type { Swiper as SwiperType } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 
 interface ImageGalleryProps {
   images?: string[];
+  shareTitle?: string;
 }
 
 const ImagePlaceholder = ({ size = "large" }: { size?: "large" | "small" }) => (
@@ -28,18 +31,40 @@ const ImagePlaceholder = ({ size = "large" }: { size?: "large" | "small" }) => (
   </div>
 );
 
-const ImageGallery = ({ images = [] }: ImageGalleryProps) => {
+const ImageGallery = ({ images = [], shareTitle }: ImageGalleryProps) => {
   const displayImages = images.length > 0 ? images : [];
   const hasImages = displayImages.length > 0;
+  const total = hasImages ? displayImages.length : 5;
+
+  const [currentIndex, setCurrentIndex] = useState(1);
+
+  // Mobile only — triggers native share sheet (iOS/Android)
+  const handleShare = useCallback(async () => {
+    const url = window.location.href;
+    const title = shareTitle ?? document.title;
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+      } catch {
+        // user cancelled
+      }
+    } else {
+      // fallback: copy to clipboard
+      await navigator.clipboard.writeText(url).catch(() => {});
+    }
+  }, [shareTitle]);
 
   return (
     <>
-      {/* Mobile Slider */}
-      <div className="block sm:hidden mb-0">
+      {/* ── Mobile Slider ─────────────────────────────────────────────────── */}
+      <div className="block sm:hidden mb-0 relative">
         <Swiper
           modules={[Pagination]}
-          pagination={{ clickable: true }}
+          pagination={false}
           className="aspect-[4/3] w-full"
+          onSlideChange={(swiper: SwiperType) =>
+            setCurrentIndex(swiper.activeIndex + 1)
+          }
         >
           {hasImages
             ? displayImages.map((imageUrl, index) => (
@@ -57,9 +82,36 @@ const ImageGallery = ({ images = [] }: ImageGalleryProps) => {
                 </SwiperSlide>
               ))}
         </Swiper>
+
+        {/* Share button — top right */}
+        <button
+          onClick={handleShare}
+          aria-label="Share this business"
+          className="absolute top-3 right-3 z-20 flex items-center justify-center w-9 h-9 rounded-full bg-white/80 backdrop-blur-sm shadow-md text-gray-800 transition-all active:scale-95"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="w-4 h-4"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            strokeWidth={2}
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"
+            />
+          </svg>
+        </button>
+
+        {/* Image counter — bottom right */}
+        <div className="absolute bottom-10 right-3 z-20 px-2.5 py-1 rounded-full bg-black/50 backdrop-blur-sm text-white text-xs font-semibold pointer-events-none">
+          {currentIndex}/{total}
+        </div>
       </div>
 
-      {/* Desktop Grid */}
+      {/* ── Desktop Grid ──────────────────────────────────────────────────── */}
       <div className="hidden sm:grid grid-cols-4 gap-2 mb-8 rounded-xl overflow-hidden">
         {/* Main large image */}
         <div className="col-span-2 row-span-2 bg-gray-200 aspect-square relative">
