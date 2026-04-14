@@ -6,7 +6,7 @@ const TermsOfService = () => {
       <div className="max-w-6xl mx-auto">
         <div className="p-8 md:p-12">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-left mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Terms of Service
             </h1>

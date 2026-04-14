@@ -6,7 +6,7 @@ const PrivacyPolicy = () => {
       <div className="max-w-6xl mx-auto">
         <div className="p-8 md:p-12">
           {/* Header */}
-          <div className="text-center mb-12">
+          <div className="text-left mb-12">
             <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Privacy Policy
             </h1>
@@ -129,7 +129,17 @@ const PrivacyPolicy = () => {
             {/* Section 7 */}
             <section className="mb-10">
               <h2 className="text-2xl font-semibold text-gray-900 mb-4">
-                7. Updates
+                7. Account Deletion
+              </h2>
+              <p className="text-gray-700 leading-relaxed">
+                A Dooinngs user account can be deleted by going to <strong>Home → Settings → Delete Account</strong> in the app.
+              </p>
+            </section>
+
+            {/* Section 8 */}
+            <section className="mb-10">
+              <h2 className="text-2xl font-semibold text-gray-900 mb-4">
+                8. Updates
               </h2>
               <p className="text-gray-700 leading-relaxed">
                 We may update this Privacy Policy. Any changes will be posted here with a new effective date.
