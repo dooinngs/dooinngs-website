@@ -4,6 +4,7 @@ export { default as ImageGallery } from "./ImageGallery";
 export { default as StatsRow } from "./StatsRow";
 export { default as AvailabilityTags } from "./AvailabilityTags";
 export { default as ServicesSection } from "./ServicesSection";
+export { default as BusinessHours } from "./BusinessHours";
 export { default as LocationSection } from "./LocationSection";
 export { default as BusinessOwner } from "./BusinessOwner";
 export { default as ReviewsSection } from "./ReviewsSection";

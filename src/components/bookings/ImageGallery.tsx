@@ -10,6 +10,7 @@ import "swiper/css/pagination";
 interface ImageGalleryProps {
   images?: string[];
   shareTitle?: string;
+  shareLink?: string;
 }
 
 const ImagePlaceholder = ({ size = "large" }: { size?: "large" | "small" }) => (
@@ -31,16 +32,15 @@ const ImagePlaceholder = ({ size = "large" }: { size?: "large" | "small" }) => (
   </div>
 );
 
-const ImageGallery = ({ images = [], shareTitle }: ImageGalleryProps) => {
+const ImageGallery = ({ images = [], shareTitle, shareLink }: ImageGalleryProps) => {
   const displayImages = images.length > 0 ? images : [];
   const hasImages = displayImages.length > 0;
   const total = hasImages ? displayImages.length : 5;
 
   const [currentIndex, setCurrentIndex] = useState(1);
 
-  // Mobile only — triggers native share sheet (iOS/Android)
   const handleShare = useCallback(async () => {
-    const url = window.location.href;
+    const url = shareLink ?? window.location.href;
     const title = shareTitle ?? document.title;
     if (navigator.share) {
       try {
@@ -49,10 +49,9 @@ const ImageGallery = ({ images = [], shareTitle }: ImageGalleryProps) => {
         // user cancelled
       }
     } else {
-      // fallback: copy to clipboard
       await navigator.clipboard.writeText(url).catch(() => {});
     }
-  }, [shareTitle]);
+  }, [shareTitle, shareLink]);
 
   return (
     <>

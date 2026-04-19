@@ -5,13 +5,9 @@ interface MapProps {
   businessName?: string;
 }
 
-const Map = ({ latitude, longitude, businessName }: MapProps) => {
+const Map = ({ latitude, longitude }: MapProps) => {
   const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
-  const query = businessName
-    ? `${encodeURIComponent(businessName)}@${latitude},${longitude}`
-    : `${latitude},${longitude}`;
-
-  const src = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${query}&zoom=16`;
+  const src = `https://www.google.com/maps/embed/v1/place?key=${apiKey}&q=${latitude},${longitude}&zoom=16`;
 
   return (
     <iframe

@@ -10,6 +10,7 @@ import {
   StatsRow,
   AvailabilityTags,
   ServicesSection,
+  BusinessHours,
   LocationSection,
   BusinessOwner,
   QRCodeSection,
@@ -42,10 +43,21 @@ export default function BusinessPageClient({ slug }: { slug: string }) {
     return <ProviderNotFound id={slug} />;
   }
 
-  const { business_details, user_profile, photos, service_types } =
-    response.data;
+  const {
+    business_name,
+    location,
+    service_types,
+    services_categories,
+    business_images,
+    service_cost,
+    completed_jobs,
+    reviews_rating,
+    owner,
+    owner_photo,
+    share_link,
+    business_hours,
+  } = response.data;
 
-  // Map service_types to boolean flags for AvailabilityTags
   const homeService = service_types.includes("home");
   const walkIn = service_types.includes("walkin");
 
@@ -57,54 +69,60 @@ export default function BusinessPageClient({ slug }: { slug: string }) {
       <div className="lg:container lg:mx-auto lg:px-8 lg:py-8">
         <div className="sm:hidden">
           <ImageGallery
-            images={photos.map((p) => p.image_url)}
-            shareTitle={business_details.business_name}
+            images={business_images.map((p) => p.image_url)}
+            shareTitle={business_name}
+            shareLink={share_link}
           />
         </div>
 
         <div className="relative z-10 -mt-6 sm:mt-0 bg-white rounded-t-3xl sm:rounded-none px-4 pt-6 sm:px-0 sm:pt-0 shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)] sm:shadow-none">
           <div className="hidden sm:block">
             <ProviderHeader
-              name={business_details.business_name}
-              address={business_details.location.street_address}
+              name={business_name}
+              address={location.street_address}
+              shareLink={share_link}
             />
           </div>
 
           <div className="sm:hidden mb-6">
             <h1 className="text-2xl font-bold text-gray-900">
-              {business_details.business_name}
+              {business_name}
             </h1>
             <p className="text-gray-500 text-sm mt-1">
-              {business_details.location.street_address}
+              {location.street_address}
             </p>
           </div>
 
           <div className="hidden sm:block">
-            <ImageGallery images={photos.map((p) => p.image_url)} />
+            <ImageGallery images={business_images.map((p) => p.image_url)} />
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Left Column */}
             <div className="space-y-8">
-              <StatsRow priceRange="GHS 40-150" completedJobs={0} rating={0} />
+              <StatsRow
+                priceRange={service_cost}
+                completedJobs={completed_jobs}
+                rating={reviews_rating.average}
+              />
 
               <AvailabilityTags homeService={homeService} walkIn={walkIn} />
 
-              <ServicesSection
-                categories={business_details.service_categories}
-              />
+              <ServicesSection categories={services_categories} />
+
+              <BusinessHours hours={business_hours} />
 
               <LocationSection
-                address={business_details.location.street_address}
-                latitude={business_details.location.latitude}
-                longitude={business_details.location.longitude}
-                businessName={business_details.business_name}
+                address={location.street_address}
+                latitude={location.latitude}
+                longitude={location.longitude}
+                businessName={business_name}
               />
 
               <BusinessOwner
-                name={`${user_profile.first_name} ${user_profile.last_name}`}
+                name={owner}
                 title="Business Owner"
-                avatar={user_profile.profile_photo}
+                avatar={owner_photo ?? undefined}
               />
 
               {/* Reviews section - empty for now since API doesn't have reviews */}
@@ -113,7 +131,7 @@ export default function BusinessPageClient({ slug }: { slug: string }) {
 
             {/* Right Column - QR Code */}
             <div className="hidden lg:block">
-              <QRCodeSection providerName={business_details.business_name} />
+              <QRCodeSection providerName={business_name} />
             </div>
           </div>
         </div>

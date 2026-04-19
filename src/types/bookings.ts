@@ -52,31 +52,31 @@ export interface BusinessResponse {
 }
 
 export interface BusinessData {
-  user_profile: UserProfile;
-  business_details: BusinessDetails;
-  photos: Photo[];
-  service_types: ServiceType[];
-  business_hours: BusinessHour[];
-  services: ServiceCategory[];
-}
-
-export interface UserProfile {
-  first_name: string;
-  last_name: string;
-  email: string;
-  phone_number: string;
-  profile_photo: string;
-}
-
-export interface BusinessDetails {
   id: string;
-  profession_id: number;
   business_name: string;
-  location: Location;
-  is_active: boolean;
-  service_types: ServiceType[];
   business_logo: string;
-  service_categories: ServiceCategory[];
+  profession: string;
+  owner: string;
+  service_cost: string;
+  completed_jobs: number;
+  reviews_rating: {
+    average: number;
+    count: number;
+  };
+  service_types: ServiceType[];
+  location: Location;
+  services_categories: ServiceCategory[];
+  business_images: BusinessImage[];
+  business_hours: BusinessHour[];
+  ratings: Review[];
+  owner_photo: string | null;
+  is_favorite: boolean;
+  share_link: string;
+}
+
+export interface BusinessImage {
+  image_url: string;
+  thumbnail_url: string;
 }
 
 export interface Location {
@@ -96,23 +96,6 @@ export interface ServiceCategory {
   services: Service[];
 }
 
-// export interface Service {
-//   id: string;
-//   name: string;
-//   price: string;
-//   duration: string;
-//   is_active: boolean;
-// }
-
-export interface Photo {
-  id: string;
-  image_url: string;
-  thumbnail_url: string;
-  public_id: string;
-  width: number;
-  height: number;
-  format: string;
-}
 
 export type ServiceType = "home" | "shop" | "walkin" | "mobile";
 

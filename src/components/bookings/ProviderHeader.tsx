@@ -5,17 +5,20 @@ import { useState, useEffect } from "react";
 interface ProviderHeaderProps {
   name: string;
   address: string;
+  shareLink?: string;
 }
 
 function ShareModal({
   name,
+  shareLink,
   onClose,
 }: {
   name: string;
+  shareLink?: string;
   onClose: () => void;
 }) {
   const [copied, setCopied] = useState(false);
-  const url = window.location.href;
+  const url = shareLink ?? window.location.href;
   const encoded = encodeURIComponent(url);
   const encodedTitle = encodeURIComponent(name);
 
@@ -119,7 +122,7 @@ function ShareModal({
   );
 }
 
-const ProviderHeader = ({ name, address }: ProviderHeaderProps) => {
+const ProviderHeader = ({ name, address, shareLink }: ProviderHeaderProps) => {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -146,7 +149,7 @@ const ProviderHeader = ({ name, address }: ProviderHeaderProps) => {
         </button>
       </div>
 
-      {showModal && <ShareModal name={name} onClose={() => setShowModal(false)} />}
+      {showModal && <ShareModal name={name} shareLink={shareLink} onClose={() => setShowModal(false)} />}
     </>
   );
 };

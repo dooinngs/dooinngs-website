@@ -36,11 +36,9 @@ export async function generateMetadata({
     };
   }
 
-  const { business_details, photos } = response.data;
-  const { business_name, location, business_logo } = business_details;
+  const { business_name, location, business_logo, business_images } = response.data;
 
-  const image =
-    business_logo || photos[0]?.image_url || undefined;
+  const image = business_logo || business_images[0]?.image_url || undefined;
 
   const description = `${location.street_address}${location.city ? `, ${location.city}` : ""}. Book on dooinngs.`;
 
